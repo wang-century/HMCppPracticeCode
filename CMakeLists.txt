@@ -35,3 +35,5 @@ add_executable(p038
         src/p038/main.cpp)
 add_executable(p041
         src/p041/main.cpp)
+add_executable(p105
+        src/p105/main.cpp src/p105/circle.cpp src/p105/point.cpp)
