@@ -194,11 +194,12 @@ void selectPersonByName(AddressList *ads) {
     }
     cout << "联系人不存在！" << endl;
 }
+
 /**
  * 修改联系人信息
  * @param ads
  */
-void updatePerson(AddressList *ads){
+void updatePerson(AddressList *ads) {
     // 判断联系人是否存在
     string name;
     string gender;
@@ -241,20 +242,20 @@ void updatePerson(AddressList *ads){
                 }
                 cout << "修改成功！" << endl;
                 break;
-                case 3:
-                    // 修改年龄
-                    while (true) {
-                        cout << "请输入年龄：";
-                        cin >> age;
-                        if (age < 0 || age > 150) {
-                            cout << "输入有误，请重新输入！" << endl;
-                            continue;
-                        }
-                        ads->personArray[existFlag].age = age;
-                        break;
+            case 3:
+                // 修改年龄
+                while (true) {
+                    cout << "请输入年龄：";
+                    cin >> age;
+                    if (age < 0 || age > 150) {
+                        cout << "输入有误，请重新输入！" << endl;
+                        continue;
                     }
-                    cout << "修改成功！" << endl;
+                    ads->personArray[existFlag].age = age;
                     break;
+                }
+                cout << "修改成功！" << endl;
+                break;
             case 4:
                 // 修改电话
                 cout << "请输入电话: ";
@@ -281,7 +282,7 @@ void updatePerson(AddressList *ads){
  * 清空通讯录
  * @param ads
  */
-void clearPersons(AddressList *ads){
+void clearPersons(AddressList *ads) {
     // 清空通讯录
     ads->size = 0;
     cout << "清空成功！" << endl;
