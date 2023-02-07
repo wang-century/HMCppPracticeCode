@@ -302,7 +302,7 @@ int main() {
     while (choice != 0) {
         // 判断是否需要暂停
         if (choice != -1) {
-            pause();
+
         }
         printMenu();    // 打印菜单
         cout << "请输入您的选择：" << endl;
